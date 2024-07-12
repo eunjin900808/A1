@@ -1,0 +1,279 @@
+@charset "utf-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+ul, li, ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+body{
+    background-color: white;
+    color: #222328;
+    font-family: Arial, "돋움 ", Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#wrap{
+    width: 1200px;
+    /* height: 700px; */
+    margin: 0 auto;
+    /* background-color: antiquewhite; */
+    
+}
+
+/* header 영역 */
+
+#header{
+    height: 100px;
+    /* background-color: rgba(150, 90, 0, 0.8); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{}
+
+.nav{}
+
+.main{
+    display: flex;
+    margin-right: 20px;
+}
+
+.main > li{position: relative;}
+
+.main > li > a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color:rgba(49, 30, 0, 0.8)
+}
+
+.main > li:hover > a{
+    background-color: rgba(49, 30, 0, 0.8);
+    color: white;
+}
+
+.sub{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    display: none;
+    z-index: 5;
+}
+
+.sub li{}
+
+.sub li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(255, 225, 176, 0.5);
+}
+
+.sub li a:hover{
+    background-color:rgba(49, 30, 0, 0.8);
+    color: white;
+}
+
+
+
+/* section 영역 */
+
+#section{
+    height: 500px;
+    /* background-color: rgba(255, 210, 142, 0.8); */
+}
+
+.slide_img{
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.top_move{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.top_move li{
+    width: 100%;
+    height: 300px;
+}
+
+.container{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container > div{
+    width: 390px;
+    height: 200px;
+    /* background-color: bisque; */
+    position: relative;
+}
+
+.container h2{
+    font-size: 14px;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid rgba(49, 30, 0, 0.8);
+    border-bottom-color: white;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.container h2.on{
+    /* 비활성화 */
+    background-color:  rgba(255, 210, 142, 0.3) !important;
+}
+
+.cont1{}
+.cont1 ul{
+    width: 100%;
+    height: 166px;
+    background-color: white;
+    border: 1px solid rgba(49, 30, 0, 0.8);
+    position: absolute;
+    top: 34px;
+    left: 0;
+    border-radius: 0 10px 10px 10px;
+}
+
+.notice{}
+
+.notice ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.notice ul li{
+    width: 370px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.notice ul li a{
+    float: left;
+    width: 70%;
+
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.notice ul li span{
+    float: right;
+}
+
+.gallery{}
+
+.gallery h2{
+    left: 100px;
+}
+
+.gallery ul{
+    /* display: flex; */
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gallery ul li{}
+
+.gallery ul li a{}
+
+.cont2 p, .cont3 p{
+    width: 100%;
+    height: 166px;
+    background-color: white;
+    border: 1px solid rgba(49, 30, 0, 0.8);
+    border-radius: 0 10px 10px 10px;
+    position: absolute;
+    top: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* footer 영역 */
+
+#footer{
+    height: 100px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dotted rgba(49, 30, 0, 0.3);
+}
+
+.sns{
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sns img:hover{
+    filter: sepia();
+}
+
+/* popup영역 */
+
+.popup{
+    width: 400px;
+    height: 500px;
+    background: rgba(255, 225, 176, 0.9);
+    border: 10px groove rgba(49, 30, 0, 0.8);
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* margin-left: -200px;
+    margin-top: -250px; */
+    transform: translate(-50%,-50%);
+    z-index: 500;
+}
+
+.popup h3{
+    line-height: 50px;
+    border-bottom: 1px dotted rgba(49, 30, 0, 0.8);
+    text-align: center;
+}
+
+.popup p{
+    padding-top: 20px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.popup p::first-letter{
+    font-size: 20px;
+}
+
+.close{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
